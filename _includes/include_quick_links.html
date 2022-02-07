@@ -1,0 +1,7 @@
+ <br>
+     <section id="top">
+     <strong>Quick Links:</strong>
+     {% for group in filter_group %}
+     <a href='index.html#{{group.name}}'>{{group.name}}</a>&nbsp;  
+     {% endfor %}
+     </section>
