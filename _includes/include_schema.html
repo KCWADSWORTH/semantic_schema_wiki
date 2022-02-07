@@ -1,11 +1,35 @@
+Schema  
+
+  {% assign filter_group = site.data.glossary.glossary | group_by: 'letter_id' | sort: 'name' %}
+  {% assign words = site.data.glossary.glossary %}
+  {% include include_glossary.html %}
+
+
+
 </br>
 
 <h3>
    {{include.tag  | capitalize}} words ({{ words | size }} entries)
 </h3> 
     
-{% include include_filters.html %}
-{% include include_quick_links.html %}
+
+<strong> Filters:</strong> <a href='{{ site.baseurl }}'>All</a> | 
+
+      {% assign categories = site.data.glossary.categories %}
+      {% for item in categories %} 
+      <a href='{{ site.baseurl }}/index_filter_{{item.tag}}'>{{item.tag}}</a> | 
+      {% endfor %}
+
+ <br>
+ <section id="top">
+ <strong>Quick Links:</strong>
+    
+       {% for group in filter_group %}
+       <a href='index.html#{{group.name}}'>{{group.name}}</a>&nbsp;  
+       {% endfor %}
+ 
+</section>
+
 
 {% for group in filter_group %}          
 
