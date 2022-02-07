@@ -1,0 +1,20 @@
+     <section id="{{ include.letter_id }}">
+     <STRONG>
+     {{ include.letter_id }}
+     </STRONG>
+    </section>
+
+     <br><br>
+
+     {% assign words = site.data.glossary.glossary | sort: "word" %}
+     {% for item in words %}
+     {% if item.letter_id == include.letter_id %}
+   
+     <STRONG>
+          {{item.word}}            </br>
+     </STRONG>
+          {{item.meaning}}         </br>
+          {{item.contributor_id}}  </br></br>
+     
+     {% endif %}
+     {% endfor %}
