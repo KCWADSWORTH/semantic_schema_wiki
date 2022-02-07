@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Open Data Glossary
+name: Open Data Schema
 
 # Short bio or description (displayed in the header)
 description: Data for everyone.
@@ -21,23 +21,8 @@ collections:
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
-  email: rob.wadsworth
-  facebook: 
-  flickr:
-  strava: 
   github: 
-  instagram:
-  linkedin: 
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: 
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: 
-  googleplus: # anything in your profile username that comes after plus.google.com/
-  strava: 
-  runengland: 
-
+ 
 primaryfont: Lato
 secondaryfont: Raleway
 tertiaryfont: Open Sans
@@ -51,19 +36,14 @@ google_analytics: UA-89380340-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://unleashyourdata.github.io/open_data_glossary
+url: https://kcwadsworth.github.io/semantic_schema_wiki/
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 
-baseurl: "https://unleashyourdata.github.io/open_data_glossary"
-
-
-#Beta URL https://edendigital.github.io/traffordtrails_beta/
-#Live URL https://dibdobrob.github.io/traffordtrails
-# !! You don't need to change any of the configuration flags below !!
+baseurl: "https://kcwadsworth.github.io/semantic_schema_wiki/"
 
 hero_image: d4e.png
 
