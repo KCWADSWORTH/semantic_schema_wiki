@@ -1,5 +1,36 @@
-categories:
+entities:
+- entity_name: Plan
+  entity_description: A plan for a plan
+  entity_owner: Richard Colshott
+  entity_maturity: In dev
+  attributes:      
+  - attribute_name: inspector_name        
+    attribute_description: <markdown_string>
+    attribute_data_type: <string>        
+    attribute_tags: ["n_tag", "y_tag", "z_tag"]
+    attribute_contains_pii: true
+    attribute_tests:
+     is_unique: true
+     is_not_null: true
+     accepted_values: ['placed', 'shipped', 'completed', 'returned']
+- entity_name: Inspector
+  entity_description: A role within'
+  entity_owner: Richard Colshott
+  entity_maturity: In dev
+  attributes:      
+  - attribute_name: inspector_name        
+    attribute_description: <markdown_string>
+    attribute_data_type: <string>        
+    attribute_tags: ["n_tag", "y_tag", "z_tag"]
+    attribute_contains_pii: true
+    attribute_tests:
+     is_unique: true
+     is_not_null: true
+     accepted_values: ['placed', 'shipped', 'completed', 'returned']        
 
+
+
+categories:
 -
     category: Data Modelling Terms
     tag: modelling
