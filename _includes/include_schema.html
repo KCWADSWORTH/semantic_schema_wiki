@@ -1,25 +1,20 @@
  
-  {% assign filter_group = site.data.glossary.entities | group_by: 'entity_owner' | sort: 'entity_name' %}
-  {% assign entities = site.data.glossary.entities %} 
-    
+  {% assign entities = site.data.glossary.entities | sort: 'entity_name' %}
+  {% assign attributes = site.data.glossary.entities.attributes | sort: 'attribute_name' %}
+ 
 
-  {% for group in filter_group %}          
-
-                    <section id="{{group.name}}">  
-                    <table width="100%">
-                    <tr>
-                          <td style="text-align:left"> <h2>{{group.name}}</h2> </td>
-                    </tr>
-                    </table> 
-                    </section>
-
-  {% for item in group.items %} 
+  {% for item in entities %} 
       <h3>
         {{item.entity_name}}
       </h3>
       <p>
         {{item.entity_description}}
       </p>
-  {% endfor %}
 
-{% endfor %}
+         {% for item in attributes %} 
+      <p>
+        {{item.attribute_name}}
+      </p>
+        {% endfor %}
+
+  {% endfor %}
