@@ -1,0 +1,57 @@
+ entities:
+     - name: Planning Inspector
+        description: A role within the planning inspectorate
+        meta:
+        owner: Richard Colshott
+        entity_maturity: In dev
+       columns:      
+        - name: inspector_name        
+          data_type: <string>        
+          description: <markdown_string>              
+          tests:
+           - unique
+           - not_null
+           - accepted_values:
+             values: ['placed', 'shipped', 'completed', 'returned']
+          tags: ["n_tag", "y_tag", "z_tag"]       
+          meta:
+           contains_pii: true
+        - name: inspector_description  
+          data_type: <string>        
+          description: <markdown_string>              
+          tests:
+           - unique
+           - not_null
+           - accepted_values:
+             values: ['placed', 'shipped', 'completed', 'returned']
+          tags: ["n_tag", "y_tag", "z_tag"]       
+          meta:
+           contains_pii: true
+     - name: Case
+        description: A role within the planning inspectorate
+        meta:
+        owner: Richard Colshott
+        entity_maturity: In dev
+       columns:      
+        - name: case_name        
+          data_type: <string>        
+          description: <markdown_string>              
+          tests:
+           - unique
+           - not_null
+           - accepted_values:
+             values: ['placed', 'shipped', 'completed', 'returned']
+          tags: ["n_tag", "y_tag", "z_tag"]       
+          meta:
+           contains_pii: true
+        - name: case_description       
+          data_type: <string>        
+          description: <markdown_string>              
+          tests:
+           - unique
+           - not_null
+           - accepted_values:
+             values: ['placed', 'shipped', 'completed', 'returned']
+          tags: ["n_tag", "y_tag", "z_tag"]       
+          meta:
+           contains_pii: true
