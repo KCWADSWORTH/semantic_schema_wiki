@@ -13,8 +13,9 @@ title: Home
 <li>Owner: {{item.entity_owner}}</li>
 <li>Maturity: {{item.entity_maturity}}</li> 
 </ul>
-<strong>Attributes</strong>
+
 <ul>
+ <h5>Entity Attributes</h5>
 {% for entry in item.attributes %}
 <li>attribute: {{entry.attribute_name}}</li>
 <li>description: {{entry.attribute_description}}</li>
@@ -25,12 +26,11 @@ title: Home
 {% for value in entry.attribute_tags %}
   &emsp; {{ value }} </br>
 {% endfor %}
-  
-  
 <li>contains pii: {{entry.attribute_contains_pii}}</li>
 </ul>
-<br>Tests<br>
+
 <ul>
+<h5>Attribute Tests</h5>
 <li>is unique: {{entry.attribute_tests.is_unique}}</li>
 <li>is not null: {{entry.attribute_tests.is_not_null}}</li>
  
