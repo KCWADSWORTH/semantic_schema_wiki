@@ -1,16 +1,14 @@
 
-<ul>
+
 {% for item in site.data.glossary.entities %}
+<ul>
+<h3>{{item.entity_name}}</h3>
 <li>{{item.entity_name}}</li>
 <li>{{item.entity_description}}</li>
 <li>{{item.entity_owner}}</li>
 <li>{{item.entity_maturity}}</li> 
-{% endfor %}
 </ul>
-
-
-{% for item in site.data.glossary.entities %}
-<h3>{{item.entity_name}}</h3>
+<h2>Attributes</h2>
 <ul>
 {% for entry in item.attributes %}
 <li>{{entry.attribute_name}}</li>
