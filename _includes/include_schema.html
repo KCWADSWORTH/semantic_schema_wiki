@@ -21,7 +21,7 @@
 <li>is unique: {{entry.attribute_tests.is_unique}}</li>
 <li>is not null: {{entry.attribute_tests.is_not_null}}</li>
   
-{% assign accepted_values = entry.attribute_tests.accepted_values | split: ", " %}
+{% assign accepted_values = entry.attribute_tests.accepted_values | split: ,  %}
 
 {% for value in accepted_values %}
   {{ value }}
