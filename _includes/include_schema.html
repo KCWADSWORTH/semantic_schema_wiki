@@ -14,7 +14,7 @@
 <li>description: {{entry.attribute_description}}</li>
 <li>data type: {{entry.attribute_data_type}}</li>
 
-{% assign tags = attribute_tags | split: ", " %}
+{% assign tags = entry.attribute_tags | split: ", " %}
 
 {% for value in tags %}
 tags 1:   {{ value }}
