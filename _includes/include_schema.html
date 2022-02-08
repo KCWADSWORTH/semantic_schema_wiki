@@ -12,8 +12,17 @@
 {% for entry in item.attributes %}
 <li>attribute: {{entry.attribute_name}}</li>
 <li>description: {{entry.attribute_description}}</li>
-<li>data type: {{entry.aattribute_data_type}}</li>
-<li>tags: {{entry.attribute_tags}}</li>
+<li>data type: {{entry.attribute_data_type}}</li>
+
+{% assign tags = attribute_tags | split: ", " %}
+
+{% for value in tags %}
+tags 1:   {{ value }}
+{% endfor %}
+  
+<li>tags 2: {{entry.attribute_tags}}</li>
+  
+  
 <li>contains pii: {{entry.attribute_contains_pii}}</li>
 </ul>
 <br>Tests<br>
