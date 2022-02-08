@@ -2,6 +2,9 @@
 <ul>
 {% for item in site.data.glossary.entities %}
 <li>{{item.entity_name}}</li>
+<li>{{item.entity_description}}</li>
+<li>{{item.entity_owner}}</li>
+<li>{{item.entity_maturity}}</li> 
 {% endfor %}
 </ul>
 
@@ -10,7 +13,10 @@
 <h3>{{item.entity_name}}</h3>
 <ul>
 {% for entry in item.attributes %}
-<li>{{entry.attributes}}</li>
+<li>{{entry.attribute_name}}</li>
+<li>{{entry.attribute_description}}</li>
+<li>{{entry.aattribute_data_type}}</li>
+<li>{{entry.attribute_contains_pii}}</li>
 {% endfor %}
 </ul>
 {% endfor %}
