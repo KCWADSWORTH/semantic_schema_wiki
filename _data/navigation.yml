@@ -1,6 +1,6 @@
-- name: Catelogue
+- name: Sample
   link: /
-- name: Schema
+- name: Template
   link: /schema/
 - name: Contribute
   link: /contribute/
