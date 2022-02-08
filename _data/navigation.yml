@@ -1,6 +1,6 @@
-- name: A to Z
+- name: Catelogue
   link: /
-- name: History
-  link: /vision/
-- name: Help us!
+- name: Schema
+  link: /schema/
+- name: Contribute
   link: /contribute/
