@@ -6,6 +6,40 @@ title: Home
 
 ---
 
-New schema
+{% for item in site.data.glossary.entities %}
+<ul>
+ <h3>{{item.entity_name}}</h3>
+<li>Description: {{item.entity_description}}</li>
+<li>Owner: {{item.entity_owner}}</li>
+<li>Maturity: {{item.entity_maturity}}</li> 
+</ul>
+<strong>Attributes</strong>
+<ul>
+{% for entry in item.attributes %}
+<li>attribute: {{entry.attribute_name}}</li>
+<li>description: {{entry.attribute_description}}</li>
+<li>data type: {{entry.attribute_data_type}}</li>
+
+<li>Tags: 
+</br>
+{% for value in entry.attribute_tags %}
+  &emsp; {{ value }} </br>
+{% endfor %}
+  
+  
+<li>contains pii: {{entry.attribute_contains_pii}}</li>
+</ul>
+<br>Tests<br>
+<ul>
+<li>is unique: {{entry.attribute_tests.is_unique}}</li>
+<li>is not null: {{entry.attribute_tests.is_not_null}}</li>
  
-{% include include_schema.html tag="all" %}
+<li>Accepted values: 
+</br>
+{% for value in entry.attribute_tests.accepted_values %}
+  &emsp; {{ value }} </br>
+{% endfor %}  
+  
+{% endfor %}
+</ul>
+{% endfor %}
