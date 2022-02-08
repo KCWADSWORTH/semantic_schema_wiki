@@ -3,18 +3,18 @@
   {% assign attributes = site.data.glossary.entities.attributes | sort: 'attribute_name' %}
  
 
-  {% for item in entities %} 
-      <h3>
-        {{item.entity_name}}
-      </h3>
-      <p>
-        {{item.entity_description}}
-      </p>
+<ul>
+{% for item in site.data.glossary.entities %}
+<li>{{item.entity_name}}</li>
+{% endfor %}
+</ul>
 
-         {% for item in attributes %} 
-      <p>
-        {{item.attribute_name}}
-      </p>
-        {% endfor %}
 
-  {% endfor %}
+{% for item in site.data.glossary.entities %}
+<h3>{{item.entity_name}}</h3>
+<ul>
+{% for entry in item.attributes %}
+<li>{{entry.attributes}}</li>
+{% endfor %}
+</ul>
+{% endfor %}
