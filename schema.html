@@ -1,0 +1,25 @@
+---
+layout: single_column_layout
+title: Schema
+hero_text: The history of our A to Z
+---
+
+This is the yaml schema that is used to populate the data catelogue
+
+<code>
+entities:
+- entity_name: Entity 1 Name
+  entity_description: Entity 1 Description
+  entity_owner: Entity 1 Owner
+  entity_maturity: Design
+  attributes:      
+  - attribute_name: Attribute 1 Name      
+    attribute_description: Attribute Description
+    attribute_data_type: Attribute Data Type    
+    attribute_tags: ["Tag A", "Tag B", "Tag C"]
+    attribute_contains_pii: true
+    attribute_tests:
+     is_unique: true
+     is_not_null: true
+     accepted_values: ['Value 1', 'Value 2', 'Value 3', 'Value 4']
+</code>
