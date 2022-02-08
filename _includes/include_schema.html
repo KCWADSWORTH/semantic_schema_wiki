@@ -23,6 +23,12 @@
 <li>tags 2: {{entry.attribute_tags}}</li>
   
   
+<!-- if site.users = "Tobi", "Laura", "Tetsuro", "Adam" -->
+{% for value in entry.attribute_tags %}
+<li>tags 3:  {{ value }}
+{% endfor %}
+  
+  
 <li>contains pii: {{entry.attribute_contains_pii}}</li>
 </ul>
 <br>Tests<br>
