@@ -1,0 +1,53 @@
+---
+layout: single_column_layout
+title: JSON TEMPLATE
+hero_text: JSON TEMPLATE
+---
+This is the JSON schema that is used to populate the data catelogue
+
+{% highlight JSON linenos %}
+{
+  "entities": [
+    {
+      "entity_name": "Employee",
+      "entity_id": 366,
+      "entity_description": "A person who works for the organisation",
+      "entity_owner": "Data Architect",
+      "entity_expert": "HR System Analyst",
+      "entity_status": "Approved",
+      "entity_type": "Master Data",
+      "entity_business_domain": "HR",
+      "entity_synonym": [
+        "Person",
+        "Colleague",
+        "Staff Member"
+      ],
+      "attributes": [
+        {
+          "attribute_name": "Employee Surname",
+          "attribute_id": 442,
+          "attribute_description": "Employee surname as registered with organisation",
+          "attribute_data_type": "String",
+          "attribute_retention_period_days": 900,
+          "attribute_characteristics": [
+            "is_unique",
+            "is_not_null",
+            "contains_pii"
+          ]
+        },
+        {
+          "attribute_name": "Employee Forename",
+          "attribute_id": 446,
+          "attribute_description": "Employee forename as registered with organisation",
+          "attribute_data_type": "String",
+          "attribute_retention_period_days": 900,
+          "attribute_characteristics": [
+            "is_not_null",
+            "contains_pii"
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endhighlight %}
