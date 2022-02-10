@@ -60,7 +60,9 @@ title: Home
     <td class="tg-vfn0">{{item.entity_status}}</td>
     <td class="tg-vfn0">{{item.entity_type}}</td>
     <td class="tg-vfn0">
-      {% for value in item.entity_synonym %} {{ value }} {{", "}} {% endfor %}
+      {% for value in item.entity_synonym %} 
+      {{ value | array_to_sentence_string: '' }}
+      {% endfor %}
     </td>
   </tr>
   <tr>
@@ -73,12 +75,12 @@ title: Home
   
   {% for entry in item.attributes %}
   <tr>
-    <td class="tg-vfn0"><strong>{{entry.attribute_name}}</strong> ({{entry.attribute_id}})</td>
+    <td class="tg-vfn0"><strong>{{entry.attribute_name}}</strong></td>
     <td class="tg-vfn0" colspan="2">{{entry.attribute_description}}</td>
     <td class="tg-vfn0">{{entry.attribute_data_type}}</td>
     <td class="tg-vfn0">{{entry.attribute_retention_period_days}} days</td>
     <td class="tg-vfn0">
-    {% for value in entry.attribute_characteristics %} {{ value }} {{" "}} {% endfor %}
+    {% for value in entry.attribute_characteristics %} {{ value }} <br>{% endfor %}
     </td>
   </tr>
   {% endfor %}
