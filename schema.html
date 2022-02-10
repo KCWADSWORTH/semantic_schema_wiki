@@ -8,16 +8,22 @@ This is the yaml schema that is used to populate the data catelogue
 
 {% highlight yaml linenos %}
 entities:
-- entity_name: Entity 1 Name
-  entity_description: Entity 1 Description
-  entity_owner: Entity 1 Owner
-  entity_maturity: Design
+- entity_name: <Entity 1 Name>
+  entity_id: <36>
+  entity_description: <Entity 1 Description>
+  entity_owner: <Owner 1>
+  entity_expert: <Expert 1>
+  entity_status: <New>
+  entity_business_domain: <Business Domain>
   attributes:      
-  - attribute_name: Attribute 1 Name      
-    attribute_description: Attribute Description
-    attribute_data_type: Attribute Data Type    
+  - attribute_name: <Attribute 1 Name>
+    attribute_id: <Attribute ID>
+    attribute_description: <Attribute Description>
+    attribute_data_type: <Attribute Data Type>    
     attribute_tags: ["Tag A", "Tag B", "Tag C"]
     attribute_contains_pii: true
+    attribute_special_data_category: true
+    attribute_retention_period_days: true
     attribute_tests:
      is_unique: true
      is_not_null: true
