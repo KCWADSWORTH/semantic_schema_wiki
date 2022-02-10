@@ -8,25 +8,25 @@ This is the yaml schema that is used to populate the data catelogue
 
 {% highlight yaml linenos %}
 entities:
-- entity_name: <Entity 1 Name>
-  entity_id: <36>
-  entity_description: <Entity 1 Description>
-  entity_owner: <Owner 1>
-  entity_expert: <Expert 1>
-  entity_status: <New>
-  entity_type: <Reference Data, Master Data, Event Data, Meta Data>
-  entity_business_domain: <Business Domain>
+- entity_name: Entity 1 Name
+  entity_id: 366
+  entity_description: Entity 1 Description
+  entity_owner: Owner 1
+  entity_expert: Expert 1
+  entity_status: New
+  entity_type: Reference Data, Master Data, Event Data or Meta Data
+  entity_business_domain: Business Domain
   entity_tags: ["Tag A", "Tag B", "Tag C"]
   attributes:      
-  - attribute_name: <Attribute 1 Name>
-    attribute_id: <Attribute ID>
-    attribute_description: <Attribute Description>
-    attribute_data_type: <Number, String, Boolean, Date, DateTime>    
-    attribute_contains_pii: <true or false>
-    attribute_special_data_category: <true | false>
-    attribute_retention_period_days: <true | false>
+  - attribute_name: Attribute 1 Name
+    attribute_id: 442
+    attribute_description: attribute description, meaning or explanation
+    attribute_data_type: Number, String, Boolean, Date or DateTime   
+    attribute_contains_pii: true or false
+    attribute_special_data_category: true or false
+    attribute_retention_period_days: true or false
     attribute_tests:
-     is_unique: <true or false>
-     is_not_null: <true or false>
+     is_unique: true or false
+     is_not_null: true or false
      accepted_values: ['Value 1', 'Value 2', 'Value 3', 'Value 4']
 {% endhighlight %}
