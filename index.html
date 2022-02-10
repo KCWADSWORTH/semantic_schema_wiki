@@ -78,7 +78,7 @@ title: Home
     <td class="tg-vfn0">{{entry.attribute_data_type}}</td>
     <td class="tg-vfn0">{{entry.attribute_retention_period_days}} days</td>
     <td class="tg-vfn0">
-    {% for value in entry.entity_characteristics %} {{ value }} {{", "}} {% endfor %}
+    {% for value in entry.attribute_characteristics %} {{ value }} {{" "}} {% endfor %}
     </td>
   </tr>
   {% endfor %}
