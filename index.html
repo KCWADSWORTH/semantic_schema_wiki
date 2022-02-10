@@ -30,64 +30,42 @@ title: Home
 {% for item in site.data.glossary.entities %}
   
 <h3>{{item.entity_name}} ({{item.entity_id}})</h3>
-  
+{{item.entity_description}}
 <table class="tg" style="undefined;table-layout: fixed; width: 100%">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 17%">
 </colgroup>
   
 <thead>
   <tr>
-    <th class="tg-d0s8">
-      Owner </br>
-      Expert
-     </th>
+    <th class="tg-d0s8">Owner</th>
+    <th class="tg-d0s8">Expert</th>
     <th class="tg-d0s8">Domain</th>
     <th class="tg-d0s8">Status</th>
     <th class="tg-d0s8">Type</th>
-    <th class="tg-z0zd">Tags</th>
+    <th class="tg-d0s8">Tags</th>
   </tr>
 </thead>
   
 <tbody>
   <tr>
-    <td class="tg-vfn0">
-      {{item.entity_owner}} </br>
-      {{item.entity_expert}}
-    
-    </td>
+    <td class="tg-vfn0">{{item.entity_owner}}</td>
+    <td class="tg-vfn0">{{item.entity_expert}}</td>
     <td class="tg-vfn0">{{item.entity_business_domain}}</td>
     <td class="tg-vfn0">{{item.entity_status}}</td>
     <td class="tg-vfn0">{{item.entity_type}}</td>
     <td class="tg-vfn0">{{item.entity_tags}}</td>
   </tr>
-  <tr>
-    <td class="tg-4al4">Description</td>
-    <td class="tg-z0zd"></td>
-    <td class="tg-8eoa"></td>
-    <td class="tg-z0zd"></td>
-    <td class="tg-z0zd"></td>
+  <tr>   
+    <td class="tg-oevy" colspan="6">Attributes</td>
   </tr>
   <tr>
-   
-    <td class="tg-vfn0" colspan="2">{{item.entity_description}}</td>
-    <td class="tg-vfn0" colspan="2"></td>
-    <td class="tg-vfn0"></td>
-  </tr>
-  <tr>
-    
-    <td class="tg-oevy">Attributes / Columns</td>
-    <td class="tg-gvcd"></td>
-    <td class="tg-gvcd"></td>
-    <td class="tg-gvcd"></td>
-    <td class="tg-iks7"></td>
-  </tr>
-  <tr>
-    
+    <td class="tg-4al4">Attribute Name</td>
     <td class="tg-4al4">Attribute Name</td>
     <td class="tg-4al4">Data Type</td>
     <td class="tg-4al4">Tests</td>
@@ -95,7 +73,7 @@ title: Home
     <td class="tg-4al4">Tags</td>
   </tr>
   <tr>
-    
+    <td class="tg-vfn0">Surname</td>
     <td class="tg-vfn0">Surname</td>
     <td class="tg-vfn0">String</td>
     <td class="tg-vfn0"><span style="font-weight:400;font-style:normal">Not null, is unique</span></td>
