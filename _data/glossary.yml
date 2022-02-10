@@ -13,10 +13,5 @@ entities:
     attribute_id: 442
     attribute_description: Employee surname as registered with organisation
     attribute_data_type: String 
-    attribute_contains_pii: true
-    attribute_special_data_category: false
     attribute_retention_period_days: 900
-    attribute_tests:
-     is_unique: false
-     is_not_null: true
-     accepted_values: ['Any']
+    attribute_characteristics: ["is_unique", "is_not_null", "contains_pii"]
