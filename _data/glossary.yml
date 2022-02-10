@@ -15,3 +15,15 @@ entities:
     attribute_data_type: String 
     attribute_retention_period_days: 900
     attribute_characteristics: ["is_unique", "is_not_null", "contains_pii"]
+  - attribute_name: Employee Forename
+    attribute_id: 446
+    attribute_description: Employee forename as registered with organisation
+    attribute_data_type: String 
+    attribute_retention_period_days: 900
+    attribute_characteristics: ["is_not_null", "contains_pii"]
+  - attribute_name: Employee Department
+    attribute_id: 449
+    attribute_description: Department code for employment
+    attribute_data_type: String 
+    attribute_retention_period_days: 900
+    attribute_characteristics: ["is_not_null"]
