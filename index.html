@@ -60,26 +60,26 @@ title: Home
     <td class="tg-vfn0">{{item.entity_status}}</td>
     <td class="tg-vfn0">{{item.entity_type}}</td>
     <td class="tg-vfn0">
-      {% for value in entry.entity_synonyms %} {{ value }} {{", "}} {% endfor %}
+      {% for value in item.entity_synonym %} {{ value }} {{", "}} {% endfor %}
     </td>
   </tr>
   <tr>
     <td class="tg-4al4">Attribute</td>
-    <td class="tg-4al4">Description</td>
+    <td class="tg-4al4" colspan="2">Description</td>
     <td class="tg-4al4">Type</td>
-    <td class="tg-4al4">PII | SC</td>
-    <td class="tg-4al4">Retail for</td>
-    <td class="tg-4al4">Tests</td>
+    <td class="tg-4al4">Retention Period</td>
+    <td class="tg-4al4">Characteristics</td>
   </tr>
   
   {% for entry in item.attributes %}
   <tr>
     <td class="tg-vfn0"><strong>{{entry.attribute_name}}</strong> ({{entry.attribute_id}})</td>
-    <td class="tg-vfn0">{{entry.attribute_description}}</td>
+    <td class="tg-vfn0" colspan="2">{{entry.attribute_description}}</td>
     <td class="tg-vfn0">{{entry.attribute_data_type}}</td>
-    <td class="tg-vfn0">{{entry.attribute_contains_pii}} | {{entry.attribute_special_data_category}}</td>
     <td class="tg-vfn0">{{entry.attribute_retention_period_days}} days</td>
-    <td class="tg-vfn0"></td>
+    <td class="tg-vfn0">
+    {% for value in entry.entity_characteristics %} {{ value }} {{", "}} {% endfor %}
+    </td>
   </tr>
   {% endfor %}
 </tbody>
