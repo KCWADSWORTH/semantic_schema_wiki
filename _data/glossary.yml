@@ -28,7 +28,7 @@ entities:
     attribute_retention_period_days: 900
     attribute_characteristics: ["is_not_null"]
 - entity_name: Member
-  entity_id: 366
+  entity_id: 726
   entity_description: A person is a paid member for the organisation
   entity_owner: Data Architect
   entity_expert: HR System Analyst
