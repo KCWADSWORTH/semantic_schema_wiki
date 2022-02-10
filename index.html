@@ -60,9 +60,7 @@ title: Home
     <td class="tg-vfn0">{{item.entity_status}}</td>
     <td class="tg-vfn0">{{item.entity_type}}</td>
     <td class="tg-vfn0">
-      {% for value in item.entity_synonym %} 
-      {{ value | array_to_sentence_string: '' }}
-      {% endfor %}
+      {{ item.entity_synonym | array_to_sentence_string: '' }}
     </td>
   </tr>
   <tr>
