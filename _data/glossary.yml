@@ -27,3 +27,31 @@ entities:
     attribute_data_type: String 
     attribute_retention_period_days: 900
     attribute_characteristics: ["is_not_null"]
+- entity_name: Member
+  entity_id: 366
+  entity_description: A person is a paid member for the organisation
+  entity_owner: Data Architect
+  entity_expert: HR System Analyst
+  entity_status: Approved
+  entity_type: Master Data
+  entity_business_domain: HR
+  entity_synonym: ["Customer", "Participant", "Share holder"]
+  attributes:      
+  - attribute_name: Member Surname
+    attribute_id: 524
+    attribute_description: Member surname as registered with organisation
+    attribute_data_type: String 
+    attribute_retention_period_days: 900
+    attribute_characteristics: ["is_unique", "is_not_null", "contains_pii"]
+  - attribute_name: Member Forename
+    attribute_id: 726
+    attribute_description: Member forename as registered with organisation
+    attribute_data_type: String 
+    attribute_retention_period_days: 900
+    attribute_characteristics: ["is_not_null", "contains_pii"]
+  - attribute_name: Subscription Tier
+    attribute_id: 729
+    attribute_description: The level that reflects the paid subscription tier of the member
+    attribute_data_type: String 
+    attribute_retention_period_days: 900
+    attribute_characteristics: ["is_not_null"]
