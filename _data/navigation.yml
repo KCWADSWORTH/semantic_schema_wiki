@@ -1,6 +1,6 @@
 - name: Sample
   link: /
-- name: Template
-  link: /schema/
-- name: Contribute
-  link: /contribute/
+- name: JSON
+  link: /json_template/
+- name: YAML
+  link: /yaml_template/
