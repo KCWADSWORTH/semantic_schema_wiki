@@ -1,22 +1,22 @@
 entities:
-- entity_name: Entity 1 Name
+- entity_name: Employee
   entity_id: 366
-  entity_description: Entity 1 Description
-  entity_owner: Owner 1
-  entity_expert: Expert 1
-  entity_status: New
-  entity_type: Reference Data, Master Data, Event Data or Meta Data
-  entity_business_domain: Business Domain
-  entity_tags: ["Tag A", "Tag B", "Tag C"]
+  entity_description: A person who works for the organisation
+  entity_owner: Data Architect
+  entity_expert: HR System Analyst
+  entity_status: Approved
+  entity_type: Master Data
+  entity_business_domain: HR
+  entity_synonym: ["Person", "Colleague", "Staff Member"]
   attributes:      
-  - attribute_name: Attribute 1 Name
+  - attribute_name: Employee Surname
     attribute_id: 442
-    attribute_description: attribute description, meaning or explanation
-    attribute_data_type: Number, String, Boolean, Date or DateTime   
-    attribute_contains_pii: true or false
-    attribute_special_data_category: true
-    attribute_retention_period_days: false
+    attribute_description: Employee surname as registered with organisation
+    attribute_data_type: String 
+    attribute_contains_pii: true
+    attribute_special_data_category: false
+    attribute_retention_period_days: 900
     attribute_tests:
-     is_unique: true
-     is_not_null: false
-     accepted_values: ['Value 1', 'Value 2', 'Value 3', 'Value 4']
+     is_unique: false
+     is_not_null: true
+     accepted_values: ['Any']
