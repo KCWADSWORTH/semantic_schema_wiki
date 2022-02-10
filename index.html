@@ -6,6 +6,21 @@ title: Home
 
 ---
 
+- 
+  attributes:      
+  - attribute_name: Attribute 1 Name
+    attribute_id: 442
+    attribute_description: attribute description, meaning or explanation
+    attribute_data_type: Number, String, Boolean, Date or DateTime   
+    attribute_contains_pii: true or false
+    attribute_special_data_category: true
+    attribute_retention_period_days: false
+    attribute_tests:
+     is_unique: true
+     is_not_null: false
+     accepted_values: ['Value 1', 'Value 2', 'Value 3', 'Value 4']
+
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-style:solid;border-width:1px;}
 .tg td{background-color:#F9CDAD;border-style:solid;border-width:0px;color:#002b36;
@@ -30,22 +45,35 @@ title: Home
 <col style="width: 20%">
 <col style="width: 20%">
 </colgroup>
-<thead>
+
+  {% for item in site.data.glossary.entities %}
+  
+   <h3>{{item.entity_name}} ({{item.entity_id}})</h3>
+  
+  <thead>
   <tr>
-    <th class="tg-d0s8">Owner</th>
+    <th class="tg-d0s8">
+      Owner </br>
+      Expert
+     </th>
     <th class="tg-d0s8">Domain</th>
     <th class="tg-d0s8">Status</th>
     <th class="tg-d0s8">Type</th>
     <th class="tg-z0zd">Tags</th>
   </tr>
 </thead>
+  
 <tbody>
   <tr>
-    <td class="tg-vfn0">Joe Blogs</td>
-    <td class="tg-vfn0">Retail</td>
-    <td class="tg-vfn0">Draft</td>
-    <td class="tg-vfn0">Master</td>
-    <td class="tg-vfn0">tag 1, tag 2, tag 3</td>
+    <td class="tg-vfn0">
+      {{item.entity_owner}} </br>
+      {{item.entity_expert}}
+    
+    </td>
+    <td class="tg-vfn0">{{item.entity_business_domain}}</td>
+    <td class="tg-vfn0">{{item.entity_status}}</td>
+    <td class="tg-vfn0">{{item.entity_type}}</td>
+    <td class="tg-vfn0">{{item.entity_tags}}</td>
   </tr>
   <tr>
     <td class="tg-4al4">Description</td>
@@ -56,7 +84,7 @@ title: Home
   </tr>
   <tr>
    
-    <td class="tg-vfn0" colspan="2">A big massive description about the column</td>
+    <td class="tg-vfn0" colspan="2">{{item.entity_description}}</td>
     <td class="tg-vfn0" colspan="2"></td>
     <td class="tg-vfn0"></td>
   </tr>
@@ -87,6 +115,7 @@ title: Home
 </tbody>
 </table></div>
 
+{% endfor %}
 
 
 {% for item in site.data.glossary.entities %}
